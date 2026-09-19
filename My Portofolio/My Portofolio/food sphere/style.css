@@ -1,0 +1,560 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff9f3;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    height: 80px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ed4b23;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar nav a:hover {
+    color: #ed4b23;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    width: 80%;
+    margin: 45px auto;
+
+    padding: 70px 30px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        120deg,
+        #fff0d7,
+        #ffd28c
+    );
+
+    border-radius: 35px;
+}
+
+.hero h1 {
+    margin: 0 0 25px;
+
+    font-size: 58px;
+
+    color: #dd421c;
+}
+
+.hero p {
+    max-width: 850px;
+
+    margin: 15px auto;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+}
+
+.hero label {
+    display: block;
+
+    margin-top: 35px;
+    margin-bottom: 15px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-box {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.search-box input {
+    width: 375px;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #ff4b23;
+}
+
+.search-box button {
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #ff4b23;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #dc3b18;
+}
+
+.search-message {
+    color: #d83b19;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features,
+.foods-section {
+    width: 80%;
+    margin: 60px auto;
+}
+
+.features h2,
+.foods-section h2 {
+    color: #d9461d;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid #f3d9c8;
+}
+
+.feature-card h3 {
+    color: #e94b22;
+
+    font-size: 22px;
+}
+
+.feature-card p {
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FOOD LIST
+========================================= */
+
+.food-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.food-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border: 1px solid #f3d9c8;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.food-card:hover {
+    transform: translateY(-3px);
+}
+
+.food-icon {
+    font-size: 40px;
+}
+
+.food-card h3 {
+    color: #e64a20;
+
+    font-size: 25px;
+
+    margin: 10px 0;
+}
+
+.food-card p {
+    line-height: 1.6;
+
+    font-size: 17px;
+}
+
+.explore-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 13px 20px;
+
+    background: #ff4b23;
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+.explore-button:hover {
+    background: #d93c18;
+}
+
+
+/* =========================================
+   FOOD PAGE
+========================================= */
+
+.food-page {
+    width: 80%;
+
+    margin: 45px auto;
+}
+
+
+/* Food hero */
+
+.food-hero {
+    padding: 70px 30px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        120deg,
+        #fff0d7,
+        #ffd28c
+    );
+
+    border-radius: 30px;
+}
+
+.big-food-icon {
+    font-size: 80px;
+}
+
+.food-hero h1 {
+    font-size: 50px;
+
+    color: #dd421c;
+
+    margin: 15px 0;
+}
+
+.food-hero p {
+    font-size: 20px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FACT
+========================================= */
+
+.fact-section {
+    margin-top: 30px;
+
+    padding: 35px;
+
+    background: #fff2df;
+
+    border-left: 6px solid #ff4b23;
+
+    border-radius: 15px;
+}
+
+.fact-section h2 {
+    color: #dd421c;
+}
+
+.fact-section p {
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   NUTRITION
+========================================= */
+
+.nutrition-section {
+    margin-top: 45px;
+}
+
+.nutrition-section h2 {
+    color: #dd421c;
+
+    font-size: 30px;
+}
+
+.nutrition-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.nutrition-card {
+    background: #f3f9e9;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.nutrition-card span {
+    display: block;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.nutrition-card strong {
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.nutrition-card p {
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   INGREDIENTS
+========================================= */
+
+.ingredients-section {
+    margin-top: 45px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    border: 1px solid #f3d9c8;
+}
+
+.ingredients-section h2 {
+    color: #dd421c;
+}
+
+.ingredients-section ul {
+    padding-left: 25px;
+}
+
+.ingredients-section li {
+    margin: 10px 0;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-container {
+    text-align: center;
+
+    margin: 40px 0;
+}
+
+.back-button {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: #ff4b23;
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    margin-top: 70px;
+
+    padding: 30px;
+
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .hero,
+    .features,
+    .foods-section,
+    .food-page {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nutrition-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .food-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrition-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

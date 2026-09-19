@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodSphere - Discover Food</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🍴 <span>dhruv jam</span>
+        </div>
+
+      <nav>
+    <a href="index.html">Home</a>
+    <a href="food.html">Explore Food</a>
+    <a href="restaurants.html">Restaurants</a>
+    <a href="recipe.html">Recipes</a>
+</nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <h1>Every Food Has a Story.</h1>
+
+            <p>
+                Discover food, learn its story, find the best restaurants,
+                order your favorite dishes, and learn how to cook them at home.
+            </p>
+
+            <label for="searchInput">
+                Search for a food
+            </label>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Try Samosa, Biryani, Dosa..."
+                >
+
+                <button id="searchButton">
+                    🔍 Search
+                </button>
+
+            </div>
+
+            <p id="searchMessage" class="search-message"></p>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="features">
+
+            <h2>What can you do with FoodSphere?</h2>
+
+            <div class="feature-grid">
+
+              <a href="index.html#foods" class="feature-card"></a>
+    <h3>📚 Learn</h3>
+    <p>
+        Discover the history, origin, interesting facts,
+        varieties and culture behind your favorite food.
+    </p>
+</a>
+
+                <div class="feature-card">
+                    <h3>📍 Find</h3>
+                    <p>
+                        Find restaurants near you and discover places
+                        serving your favorite dishes.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🛵 Order</h3>
+                    <p>
+                        Choose your favorite food and add it to your cart.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>👨‍🍳 Cook</h3>
+                    <p>
+                        Learn how to prepare your favorite food at home.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOD LIST ================= -->
+
+        <section class="foods-section" id="foods">
+
+            <h2>Explore Popular Foods</h2>
+
+            <div class="food-list">
+
+
+                <!-- BIRYANI -->
+
+                <article class="food-card">
+<div class="food-icon">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.4mTEt_JDm5535mhGj5W5iQHaFj?r=0&pid=Api&P=0&h=180" alt="Biryani">
+</div>
+                   
+    
+
+
+                    <h3>Biryani</h3>
+
+                    <p>
+                        A flavorful rice dish loved across India and beyond.
+                    </p>
+
+                    <!-- IMPORTANT:
+                         This directly opens Biryani -->
+
+                    <a
+                        class="explore-button"
+                        href="food.html?food=biryani"
+                    >
+                        Explore Biryani →
+                    </a>
+
+                </article>
+
+
+                <!-- SAMOSA -->
+
+                <article class="food-card">
+
+                   <div class="food-icon">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.fDRUA3TTWZk715DkoyWPqQHaEo?r=0&pid=Api&P=0&h=180" alt="Samosa">
+</div>
+
+                    <h3>Samosa</h3>
+
+                    <p>
+                        Crispy, spicy and one of India's favorite snacks.
+                    </p>
+
+                    <!-- IMPORTANT:
+                         This directly opens Samosa -->
+
+                    <a
+                        class="explore-button"
+                        href="food.html?food=samosa"
+                    >
+                        Explore Samosa →
+                    </a>
+
+                </article>
+
+
+                <!-- DOSA -->
+
+                <article class="food-card">
+
+                    <div class="food-icon">
+                        🥞
+                    </div>
+
+                    <h3>Dosa</h3>
+
+                    <p>
+                        A crispy South Indian classic made from fermented batter.
+                    </p>
+
+                    <a
+                        class="explore-button"
+                        href="food.html?food=dosa"
+                    >
+                        Explore Dosa →
+                    </a>
+
+                </article>
+
+
+                <!-- PIZZA -->
+
+                <article class="food-card">
+
+                 <div class="food-icon">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.aI6PhJLs9P3pxi1cs7mDtAHaDt?r=0&pid=Api&P=0&h=180" alt="Pizza">
+</div>
+                    <h3>Pizza</h3>
+
+                    <p>
+                        A worldwide favorite with countless styles and toppings.
+                    </p>
+
+                    <a
+                        class="explore-button"
+                        href="food.html?food=pizza"
+                    >
+                        Explore Pizza →
+                    </a>
+
+                </article>
+
+
+                <!-- BURGER -->
+
+                <article class="food-card">
+
+                    <div class="food-icon">
+                        🍔
+                    </div>
+
+                    <h3>Burger</h3>
+
+                    <p>
+                        A popular sandwich made with a bun, patty and toppings.
+                    </p>
+
+                    <a
+                        class="explore-button"
+                        href="food.html?food=burger"
+                    >
+                        Explore Burger →
+                    </a>
+
+                </article>
+
+
+                <!-- IDLI -->
+
+                <article class="food-card">
+
+                    <div class="food-icon">
+                        🍥
+                    </div>
+
+                    <h3>Idli</h3>
+
+                    <p>
+                        Soft steamed cakes made from fermented rice and lentils.
+                    </p>
+
+                    <a
+                        class="explore-button"
+                        href="food.html?food=idli"
+                    >
+                        Explore Idli →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 FoodSphere. Discover food. Discover stories.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

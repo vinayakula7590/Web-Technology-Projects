@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vinayakula Dhruva | Resume</title>
+
+<style>
+
+
+/* ================================
+   BASIC SETTINGS
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050816;
+    color:white;
+    overflow:hidden;
+}
+
+/* ================================
+   SLIDES
+================================ */
+
+.slide{
+    width:100vw;
+    height:100vh;
+    display:none;
+    position:relative;
+    overflow:hidden;
+    padding:60px;
+}
+
+.slide.active{
+    display:flex;
+    animation:slideIn .7s ease;
+}
+
+@keyframes slideIn{
+    from{
+        opacity:0;
+        transform:scale(.96);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* ================================
+   ANIMATED BACKGROUND
+================================ */
+
+.slide::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#00e5ff;
+    filter:blur(150px);
+    opacity:.12;
+    border-radius:50%;
+    top:-200px;
+    left:-150px;
+    animation:moveGlow 8s infinite alternate;
+}
+
+.slide::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#9b5cff;
+    filter:blur(160px);
+    opacity:.13;
+    border-radius:50%;
+    right:-150px;
+    bottom:-200px;
+    animation:moveGlow 10s infinite alternate-reverse;
+}
+
+@keyframes moveGlow{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(100px,80px);
+    }
+}
+
+/* ================================
+   COMMON CONTENT
+================================ */
+
+.content{
+    width:100%;
+    height:100%;
+    position:relative;
+    z-index:2;
+}
+
+.heading{
+    font-size:55px;
+    font-weight:1000;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.heading span{
+    color:#00e5ff;
+}
+
+.subheading{
+    font-size:21px;
+    color:#b8c2d8;
+    font-style:italic;
+    margin-bottom:35px;
+}
+
+.line{
+    width:100px;
+    height:6px;
+    background:#ff9d2e;
+    border-radius:20px;
+    margin-bottom:35px;
+}
+
+/* ================================
+   COVER
+================================ */
+
+.cover{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.cover-text{
+    width:55%;
+}
+
+.small-title{
+    color:#00e5ff;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:4px;
+}
+
+.name{
+    font-size:75px;
+    font-weight:1000;
+    line-height:.95;
+    margin:20px 0;
+}
+
+.name span{
+    color:#00e5ff;
+}
+
+.tagline{
+    font-size:25px;
+    font-style:italic;
+    color:#c8d1e4;
+    margin-bottom:30px;
+}
+
+.cover-photo{
+    width:390px;
+    height:530px;
+    object-fit:cover;
+    border-radius:30px;
+    border:5px solid #00e5ff;
+    box-shadow:
+        0 0 20px #00e5ff,
+        0 0 60px rgba(0,229,255,.3);
+}
+
+/* ================================
+   CARDS
+================================ */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:rgba(17,27,55,.9);
+    border:2px solid #263b6b;
+    border-radius:25px;
+    padding:30px;
+    transition:.4s;
+    cursor:pointer;
+    min-height:190px;
+    position:relative;
+    overflow:hidden;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+    border-color:#00e5ff;
+    box-shadow:0 0 30px rgba(0,229,255,.25);
+}
+
+.card h2{
+    font-size:28px;
+    font-weight:1000;
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:17px;
+    line-height:1.6;
+    color:#c6cee0;
+    font-style:italic;
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+/* ================================
+   PERSONAL DETAILS
+================================ */
+
+.personal{
+    display:grid;
+    grid-template-columns:1.3fr .8fr;
+    gap:40px;
+    align-items:center;
+}
+
+.details-box{
+    background:rgba(15,25,52,.9);
+    border:2px solid #00e5ff;
+    border-radius:30px;
+    padding:40px;
+}
+
+.detail{
+    display:flex;
+    margin:25px 0;
+    font-size:20px;
+}
+
+.detail strong{
+    width:180px;
+    color:#00e5ff;
+}
+
+.detail span{
+    font-style:italic;
+}
+
+.personal-photo{
+    width:350px;
+    height:470px;
+    object-fit:cover;
+    border-radius:30px;
+    border:4px solid #ff9d2e;
+    box-shadow:0 0 40px rgba(255,157,46,.25);
+}
+
+/* ================================
+   EDUCATION
+================================ */
+
+.timeline{
+    display:flex;
+    justify-content:space-around;
+    margin-top:70px;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    top:35px;
+    left:10%;
+    width:80%;
+    height:5px;
+    background:#00e5ff;
+}
+
+.edu{
+    width:40%;
+    padding:35px;
+    border-radius:25px;
+    background:#111b37;
+    border:2px solid #9b5cff;
+    position:relative;
+    z-index:2;
+}
+
+.edu h2{
+    color:#ff9d2e;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.edu h3{
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.edu p{
+    color:#c6cee0;
+    font-style:italic;
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* ================================
+   SKILLS
+================================ */
+
+.skills{
+    display:flex;
+    gap:40px;
+    justify-content:center;
+    margin-top:60px;
+}
+
+.skill{
+    width:300px;
+    height:300px;
+    background:#111b37;
+    border:3px solid #00e5ff;
+    border-radius:30px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    transition:.4s;
+}
+
+.skill:hover{
+    transform:rotate(-2deg) scale(1.07);
+    box-shadow:0 0 40px rgba(0,229,255,.3);
+}
+
+.skill .letter{
+    font-size:90px;
+    font-weight:1000;
+    color:#00e5ff;
+}
+
+.skill h2{
+    font-size:35px;
+}
+
+.skill p{
+    color:#aebbd4;
+    font-style:italic;
+    margin-top:10px;
+}
+
+/* ================================
+   HOBBIES
+================================ */
+
+.hobby-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.hobby{
+    padding:35px;
+    background:#111b37;
+    border-radius:25px;
+    border:2px solid #9b5cff;
+    text-align:center;
+    transition:.4s;
+}
+
+.hobby:hover{
+    transform:translateY(-8px);
+    border-color:#ff9d2e;
+}
+
+.hobby .emoji{
+    font-size:55px;
+}
+
+.hobby h2{
+    margin:15px 0;
+    font-size:25px;
+}
+
+.hobby p{
+    color:#b9c3d8;
+    font-style:italic;
+}
+
+/* ================================
+   GOAL
+================================ */
+
+.goal{
+    display:flex;
+    gap:35px;
+    margin-top:35px;
+}
+
+.goal-box{
+    flex:1;
+    padding:45px;
+    border-radius:30px;
+    background:#111b37;
+    border:3px solid #ff9d2e;
+    text-align:center;
+}
+
+.goal-box h2{
+    font-size:55px;
+    color:#ff9d2e;
+    margin:20px 0;
+}
+
+.goal-box p{
+    font-size:20px;
+    line-height:1.7;
+    color:#c8d1e2;
+    font-style:italic;
+}
+
+/* ================================
+   FRIENDS
+================================ */
+
+.friends-box{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    background:#111b37;
+    padding:40px;
+    border-radius:30px;
+    border:3px solid #ff4fcf;
+}
+
+.friends-box h2{
+    font-size:48px;
+    color:#ff4fcf;
+}
+
+.friends-box p{
+    font-size:21px;
+    color:#c8d1e2;
+    font-style:italic;
+    line-height:1.7;
+}
+
+/* ================================
+   POPUP
+================================ */
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.8);
+    backdrop-filter:blur(10px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:100;
+}
+
+.popup.show{
+    display:flex;
+    animation:fade .3s ease;
+}
+
+@keyframes fade{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+.popup-box{
+    width:600px;
+    max-width:90%;
+    padding:45px;
+    background:#101a38;
+    border:3px solid #00e5ff;
+    border-radius:30px;
+    box-shadow:0 0 70px rgba(0,229,255,.3);
+    text-align:center;
+}
+
+.popup-box h2{
+    font-size:40px;
+    color:#00e5ff;
+    margin-bottom:20px;
+}
+
+.popup-box p{
+    color:#d2d9e8;
+    font-size:19px;
+    line-height:1.7;
+    font-style:italic;
+}
+
+.close{
+    margin-top:30px;
+    padding:12px 30px;
+    border:0;
+    border-radius:30px;
+    background:#ff9d2e;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navigation{
+    position:fixed;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:15px;
+    z-index:50;
+}
+
+.navigation button{
+    border:2px solid #00e5ff;
+    background:#101a38;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.navigation button:hover{
+    background:#00e5ff;
+    color:#050816;
+}
+
+.slide-number{
+    position:absolute;
+    top:25px;
+    right:35px;
+    color:#71809d;
+    font-weight:bold;
+    z-index:5;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media(max-width:900px){
+
+    .slide{
+        padding:35px 25px;
+        overflow:auto;
+    }
+
+    .heading{
+        font-size:38px;
+    }
+
+    .name{
+        font-size:50px;
+    }
+
+    .cover,
+    .personal,
+    .goal{
+        flex-direction:column;
+        display:flex;
+    }
+
+    .cover-text{
+        width:100%;
+    }
+
+    .cover-photo{
+        width:250px;
+        height:320px;
+    }
+
+    .cards,
+    .hobby-grid{
+        grid-template-columns:1fr;
+    }
+
+    .timeline{
+        flex-direction:column;
+        gap:25px;
+    }
+
+    .timeline::before{
+        display:none;
+    }
+
+    .edu{
+        width:100%;
+    }
+
+    .skills{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .friends-box{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     SLIDE 1
+===================================================== -->
+
+<section class="slide active">
+
+<div class="content cover">
+
+<div class="cover-text">
+
+<div class="small-title">
+MY RESUME • 2026
+</div>
+
+<h1 class="name">
+VINAYAKULA<br>
+<span>DHRUVA</span>
+</h1>
+
+<div class="line"></div>
+
+<p class="tagline">
+“Dream big • Learn continuously • Build something meaningful”
+</p>
+<img src="img src=imagesphoto1.jpg class=cover-photo"alt="Dhruva" >
+
+<button class="navigation-btn"
+onclick="openPopup(
+'Welcome!',
+'Hello everyone! I am Vinayakula Dhruva. Welcome to my interactive resume presentation. Let me take you through my education, skills, hobbies, interests and future goals.'
+)">
+✨ START PRESENTATION
+</button>
+
+</div>
+
+<img src="C:\Users\LENOVO\Downloads\WhatsApp Image 2026-09-10 at 10.04.34 PM.jpeg" >
+
+
+<div class="slide-number">01 / 09</div>
+
+</section>
+
+
+<!-- =====================================================
+     SLIDE 2
+===================================================== -->
+
+<section class="slide">
+
+<div class="content">
+
+<h1 class="heading">
+ABOUT <span>ME</span>
+</h1>
+
+<p class="subheading">
+A quick look at who I am
+</p>
+
+<div class="personal">
+
+<div class="details-box">
+
+<div class="detail">
+<strong>Name</strong>
+<span>Vinayakula Dhruva</span>
+</div>
+
+<div class="detail">
+<strong>Father</strong>
+<span>V. Kiran Kumar</span>
+</div>
+
+<div class="detail">
+<strong>Mother</strong>
+<span>V. Vijaya Lakshmi</span>
+</div>
+
+<div class="detail">
+<strong>Location</strong>
+<span>Tirupati</span>
+</div>
+
+<div class="detail">
+<strong>Current Study</strong>
+<span>B.Tech – 1st Year</span>
+</div>
+
+</div>
+
+<img src="c:\Users\LENOVO\Downloads\WhatsApp Image 2026-09-10 at 10.04.34 PM.jpeg" class="personal-photo">
+
+</div>
+
+</div>
+
+<div class="slide-number">02 / 09</div>
+
+</section>
+
+
+<!-- =====================================================
+     SLIDE 3
+===================================================== -->
+
+<section class="slide">
+
+<div class="content">
+
+<h1 class="heading">
+MY <span>EDUCATION</span>
+</h1>
+
+<p class="subheading">
+My academic journey so far
+</p>
+
+<div class="timeline">
+
+<div class="edu">
+
+<h2>2024 – 2026</h2>
+
+<h3>Intermediate</h3>
+
+<p>
+Ashwamedha Junior College<br>
+Tirupati
+</p>
+
+<br>
+
+<button
+onclick="openPopup(
+'Intermediate',
+'I completed my Intermediate education at Ashwamedha Junior College, Tirupati, during 2024 to 2026.'
+)">
+MORE INFO
+</button>
+
+</div>
+
+
+<div class="edu">
+
+<h2>2026 – Present</h2>
+
+<h3>B.Tech – First Year</h3>
+
+<p>
+Malla Reddy University<br>
+Tirupati
+</p>
+
+<br>
+
+<button
+onclick="openPopup(
+'B.Tech Journey',
+'I am currently studying B.Tech First Year at Malla Reddy University, Tirupati. My goal is to develop strong technical knowledge and become a successful software engineer.'
+)">
+MORE INFO
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="slide-number">03 / 09</div>
+
+</section>
+
+
+<!-- =====================================================
+     SLIDE 4
+===================================================== -->
+
+<section class="slide">
+
+<div class="content">
+
+<h1 class="heading">
+TECHNICAL <span>SKILLS</span>
+</h1>
+
+<p class="subheading">
+The programming skills I have learned
+</p>
+
+<div class="skills">
+
+<div class="skill"
+onclick="openPopup(
+'C Programming',
+'I have learned C programming and use it to understand programming fundamentals, logic, variables, loops, functions and problem solving.'
+)">
+
+<div class="letter">C</div>
+
+<h2>C</h2>
+
+<p>Learned ✓</p>
+
+</div>
+
+
+<div class="skill"
+onclick="openPopup(
+'C++ Programming',
+'I have learned C++ and understand object-oriented programming concepts. I want to continue improving my C++ programming and problem-solving skills.'
+)">
+
+<div class="letter">C++</div>
+
+<h2>C++</h2>
+
+<p>Learned ✓</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="slide-number">04 / 09</div>
+
+</section>
+
+
+<!-- =====================================================
+     SLIDE 5
+===================================================== -->
+
+<section class="slide">
+
+<div class="content">
+
+<h1 class="heading">
+MY <span>HOBBIES</span>
+</h1>
+
+<p class="subheading">
+Things I enjoy doing in my free time
+</p>
+
+<div class="hobby-grid">
+
+<div class="hobby"
+onclick="openPopup('Playing Cricket','Cricket is one of my favourite hobbies. I enjoy both watching and playing the game.')">
+
+<div class="emoji">🏏</div>
+<h2>Cricket</h2>
+<p>Playing & watching cricket</p>
+
+</div>
+
+
+<div class="hobby"
+onclick="openPopup('Listening to Music','Music helps me relax, enjoy my free time and recharge.')">
+
+<div class="emoji">🎵</div>
+<h2>Music</h2>
+<p>Listening to music</p>
+
+</div>
+
+
+<div class="hobby"
+onclick="openPopup('Watching Cinemas','I enjoy watching movies and spending my free time with interesting films.')">
+
+<div class="emoji">🎬</div>
+<h2>Movies</h2>
+<p>Watching cinemas</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="slide-number">05 / 09</div>
+
+</section>
+
+
+<!-- =====================================================
+     SLIDE 6
+===================================================== -->
+
+<section class="slide">
+
+<div class="content">
+
+<h1 class="heading">
+MY <span>INTERESTS</span>
+</h1>
+
+<p class="subheading">
+What excites me outside academics
+</p>
+
+<div class="cards">
+
+<div class="card"
+onclick="openPopup('Cricket','I love watching cricket and following exciting matches.')">
+
+<div class="icon">🏏</div>
+<h2>Cricket</h2>
+<p>I love watching cricket.</p>
+
+</div>
+
+
+<div class="card"
+onclick="openPopup('Formula 1','I enjoy watching Formula 1 races because of the speed, competition and technology.')">
+
+<div class="icon">🏎️</div>
+<h2>F1 Racing</h2>
+<p>The speed and thrill of motorsport.</p>
+
+</div>
+
+
+<div class="card"
+onclick="openPopup('Bike Rides','I enjoy going for bike rides and exploring new surroundings.')">
+
+<div class="icon">🏍️</div>
+<h2>Bike Rides</h2>
+<p>Freedom on two wheels.</p>
+
+</div>
+
+
+<div class="card"
+onclick="openPopup('Nature','I like peaceful places such as hills and mountains where I can enjoy nature and calm surroundings.')">
+
+<div class="icon">🏔️</div>
+<h2>Nature</h2>
+<p>Hills, mountains and peaceful places.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="slide-number">06 / 09</div>
+
+</section>
+
+
+<!-- =====================================================
+     SLIDE 7
+===================================================== -->
+
+<section class="slide">
+
+<div class="content">
+
+<h1 class="heading">
+MY <span>FRIENDS</span>
+</h1>
+
+<p class="subheading">
+Good friends make every journey more memorable
+</p>
+
+<div class="friends-box">
+
+<div style="font-size:100px;">
+👥
+</div>
+
+<div>
+
+<h2>A LOT OF FRIENDS</h2>
+
+<p>
+I have a lot of friends, and they make my journey
+more enjoyable and memorable. I believe friendship,
+teamwork and supporting each other are important
+parts of life.
+</p>
+
+<br>
+
+<button onclick="openPopup(
+'My Friends',
+'I have a lot of friends. They bring fun, support and memorable moments into my life. I value friendship and teamwork.'
+)">
+💜 MY FRIENDSHIP
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="slide-number">07 / 09</div>
+
+</section>
+
+
+<!-- =====================================================
+     SLIDE 8
+===================================================== -->
+
+<section class="slide">
+
+<div class="content">
+
+<h1 class="heading">
+MY <span>MAIN AIM</span>
+</h1>
+
+<p class="subheading">
+Big dreams require big effort
+</p>
+
+<div class="goal">
+
+<div class="goal-box">
+
+<div style="font-size:65px;">
+💰
+</div>
+
+<h2>BECOME RICH</h2>
+
+<p>
+My main aim is to become financially successful,
+build a better future, create opportunities for
+myself and my family, and live a meaningful life.
+</p>
+
+</div>
+
+
+<div class="goal-box">
+
+<div style="font-size:65px;">
+💻
+</div>
+
+<h2>SOFTWARE ENGINEER</h2>
+
+<p>
+I want to become a skilled software engineer and
+work in a top MNC such as Google, Amazon or
+another leading technology company.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="slide-number">08 / 09</div>
+
+</section>
+
+
+<!-- =====================================================
+     SLIDE 9
+===================================================== -->
+
+<section class="slide">
+
+<div class="content"
+style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+
+<div style="font-size:80px;">
+🚀
+</div>
+
+<h1 class="heading">
+THANK <span>YOU!</span>
+</h1>
+
+<p class="subheading"
+style="font-size:25px;">
+Thank you for giving me your valuable time.
+</p>
+
+<div class="line"></div>
+
+<h2 style="font-size:40px;">
+VINAYAKULA DHRUVA
+</h2>
+
+<p style="
+margin-top:20px;
+font-size:20px;
+color:#aebbd4;
+font-style:italic;
+">
+Dream • Learn • Achieve • Succeed
+</p>
+
+<br>
+
+<button onclick="openPopup(
+'Thank You!',
+'Thank you everyone for listening to my resume presentation. I hope you enjoyed learning about me, my interests and my future goals!'
+)">
+✨ ONE LAST MESSAGE
+</button>
+
+</div>
+
+<div class="slide-number">09 / 09</div>
+
+</section>
+
+
+<!-- =====================================================
+     POPUP
+===================================================== -->
+
+<div class="popup" id="popup">
+
+<div class="popup-box">
+
+<h2 id="popupTitle">
+Title
+</h2>
+
+<p id="popupText">
+Text
+</p>
+
+<button class="close" onclick="closePopup()">
+CLOSE ✕
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<div class="navigation">
+
+<button onclick="previousSlide()">
+← PREVIOUS
+</button>
+
+<button onclick="nextSlide()">
+NEXT →
+</button>
+
+</div>
+
+
+<script>
+
+/* ==========================================
+   SLIDE SYSTEM
+========================================== */
+
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index){
+
+    if(index < 0){
+        index = slides.length - 1;
+    }
+
+    if(index >= slides.length){
+        index = 0;
+    }
+
+    slides.forEach(slide=>{
+        slide.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+
+    currentSlide = index;
+}
+
+function nextSlide(){
+    showSlide(currentSlide + 1);
+}
+
+function previousSlide(){
+    showSlide(currentSlide - 1);
+}
+
+
+/* ==========================================
+   KEYBOARD CONTROLS
+========================================== */
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key === "ArrowRight"){
+        nextSlide();
+    }
+
+    if(event.key === "ArrowLeft"){
+        previousSlide();
+    }
+
+    if(event.key === "Escape"){
+        closePopup();
+    }
+
+});
+
+
+/* ==========================================
+   POPUP SYSTEM
+========================================== */
+
+function openPopup(title,text){
+
+    document.getElementById("popupTitle").innerText = title;
+
+    document.getElementById("popupText").innerText = text;
+
+    document.getElementById("popup").classList.add("show");
+
+}
+
+
+function closePopup(){
+
+    document.getElementById("popup").classList.remove("show");
+
+}
+
+
+/* ==========================================
+   CLOSE POPUP WHEN CLICKING OUTSIDE
+========================================== */
+
+document.getElementById("popup").addEventListener("click",function(event){
+
+    if(event.target === this){
+        closePopup();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
